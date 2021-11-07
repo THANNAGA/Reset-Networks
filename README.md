@@ -1,7 +1,7 @@
 # Reset Networks : Towards topography at scale
 
 ## What is a reset network?
-A reset network is any network in which channels are reset into a spatial map, at least once during the course of computations.
+A reset network is any network in which non-spatial channels are reset into a spatial map, at least once during the course of computations.
 
 ![image](https://user-images.githubusercontent.com/13241166/140624140-b0375f26-9be4-477a-aa35-894d42dcec07.png)
 
