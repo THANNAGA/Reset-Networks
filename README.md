@@ -18,9 +18,15 @@ The notebooks hosted in this Github and on Google Colab demonstrate that Reset n
 
 Cortical topography in the strict sense is the notion that "nearby neurons in the cortex have receptive fields at nearby locations in the world" [[1]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4074559/). When understood as applying also to local fields or voxels as well as to neurons, this is a widespread phenomenon in brain imaging, observed throughout the visual cortex as well as in some associative areas. 
 
-In parietal cortex, voxels selective for similar numbers are more likely to be contiguous, a phenomenon which has only been partially explained as a planar diffusion process of number codes, due to locally but randomly connected cortical units [2]. As the figure below shows, a Reset Network trained to map images of numbers onto number codes succeeds in reproducing topographic organization for numbers.
+### Topography for numbers in parietal cortex
+
+In parietal cortex, voxels selective for similar numbers are more likely to be contiguous, a phenomenon which has only been partially explained as a planar diffusion process of number codes, due to an underlying locally and randomly connected network of cortical units [2]. This network, however, did not process real stimuli. As the figure below shows, a Reset Network trained to map images of numbers onto number codes succeeds in reproducing topographic organization.
 
 ![Reset_numerotopy](https://user-images.githubusercontent.com/13241166/141204652-fa07b2f1-b3dd-4043-98e3-dd7da3caf01c.png)
+
+Number topgraphy is clearly visible on the selectivity map, and quantified in the plot above, where it can also be seen to emerge very quickly during training. Topography and neighborhood are both very significantly above levels obtained for shuffled selectivity maps. Also notable is the tendency of subnetworks to specialize for specific numbers, + or -1.
+
+### Topography in ventral occipito-temporal cortex
 
 ## References
 [1] Patel GH, Kaplan DM, Snyder LH. Topographic organization in the brain: searching for general principles. Trends Cogn Sci. 2014;18(7):351-363. doi:10.1016/j.tics.2014.03.008
