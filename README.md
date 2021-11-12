@@ -20,16 +20,24 @@ Cortical topography in the strict sense is the notion that "nearby neurons in th
 
 ### Topography for numbers in parietal cortex
 
-In parietal cortex, voxels selective for similar numbers are more likely to be contiguous, a phenomenon which has only been partially explained as a planar diffusion process of number codes, due to an underlying locally and randomly connected network of cortical units [2]. This network, however, did not process real stimuli. As the figure below shows, a Reset Network trained to map images of numbers onto number codes succeeds in reproducing topographic organization.
+In parietal cortex, voxels selective for similar numbers are more likely to be contiguous, a phenomenon which has only been partially explained as a planar diffusion process of number codes, due to an underlying locally and randomly connected network of cortical units [2]. This network, however, did not process real stimuli. As the figure below shows, a Reset Network with a single 8x8 grid, can be trained to map images of numbers onto number codes, and succeeds in reproducing topographic organization.
 
 ![Reset_numerotopy](https://user-images.githubusercontent.com/13241166/141204652-fa07b2f1-b3dd-4043-98e3-dd7da3caf01c.png)
 
-Number topgraphy is clearly visible on the selectivity map, and quantified in the plot above, where it can also be seen to emerge very quickly during training. Topography and neighborhood are both very significantly above levels obtained for shuffled selectivity maps. Also notable is the tendency of subnetworks to specialize for specific numbers, + or -1.
+Number topgraphy is clearly visible on the map of number preferences, and is quantified in the middle plot above, where it can also be seen to emerge quickly during training. Topography and neighborhood similarity (right plot) are both quite significantly above the levels obtained for shuffled selectivity maps. Also notable is the tendency of subnetworks to specialize for specific numbers, or in the same ballpark.
 
-### Topography in ventral occipito-temporal cortex
+### Topography for categorical areas in ventral occipitotemporal cortex
+
+In ventral occipitotemporal cortex, more than two decades of studies have established the presence of areas selective for faces, tools, houses, and words. 
+Several models now reproduce caracteristics of vOTC, but as far as I know, only one [3] achieves both topography and scale at the same time - with I would argue topography emerging in a conceptually problematic way. 
+
+![Reset network for vOTC](https://user-images.githubusercontent.com/13241166/141536355-621178f4-555b-4863-8639-be40cb61c21c.png)
 
 ## References
 [1] Patel GH, Kaplan DM, Snyder LH. Topographic organization in the brain: searching for general principles. Trends Cogn Sci. 2014;18(7):351-363. doi:10.1016/j.tics.2014.03.008
 
 [2] Hannagan T, Nieder A, Viswanathan P, Dehaene S. A random-matrix theory of the number sense. Phil. Trans. R. Soc. B. 2018;373:20170253.
 http://doi.org/10.1098/rstb.2017.0253
+
+[3] Lee H, Margalit E, Jozwik KM, Cohen MA, Kanwisher N, Yamins DL, DiCarlo JJ. (2020). Topographic deep artificial neural networks reproduce the 
+hallmarks of the primate inferior temporal cortex face processing network. ![bioRxiv](https://www.biorxiv.org/content/10.1101/2020.07.09.185116v1.full.pdf). 
