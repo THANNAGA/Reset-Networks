@@ -2,7 +2,7 @@
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1-iUCNMw8Ry-y4PF0xu_jGFpx0ghjTp4i?usp=sharing)
 
 ## What is a reset network?
-A reset network is a composition of several levels of neural networks, in which non-spatial outputs at one level are reshaped into a spatial map which serves as input for the next level of networks.
+A reset network is a composition of several levels of neural networks (typically CNNs), in which the outputs of many networks at one level are reshaped into a spatial map which serves as input for the next level.
 
 ![reset_networks_gen](https://user-images.githubusercontent.com/13241166/140661564-94a53cde-32c2-4b81-b4b6-db2c2fcb58fa.png)
 
@@ -30,11 +30,21 @@ Number topography is clearly visible on the map of number preferences, and is qu
 
 ### Topography for categorical areas in ventral occipitotemporal cortex
 
-In ventral occipitotemporal cortex, more than two decades of studies have established the presence of areas selective for various widespread visual categories, in particular faces, bodies, tools, houses, and words. While ther is no shortage of computational models able to reproduce many caracteristics of the visual system, including vOTC, only one [3] achieves both topography and scale at the same time - with topography being problematic as it emerges from two different notions of space. Reset networks achieve topography at scale in a conceptually simple way.
+In ventral occipitotemporal cortex, more than two decades of studies have established the presence of areas selective for various widespread visual categories, in particular faces, bodies, tools, houses, and words. While there is no shortage of computational models able to reproduce many caracteristics of the visual system, including some of vOTC, only one [3] achieves both topography and scale at the same time - with topography being problematic as it emerges from two different notions of space. Reset networks achieve topography at scale in a conceptually simple way.
 
 ![Reset network for vOTC](https://user-images.githubusercontent.com/13241166/141536355-621178f4-555b-4863-8639-be40cb61c21c.png)
 
 The left pannel in the figure shows a Reset network classifier trained on Cifar-100. The right pannel shows category preferences on the grid after training. Only 3 categories are considered - objects, houses and people - which were obtained by agregating the relevant cifar-100 classes. Clustering is visible in the map, and quantified in the subplots above (although with different indicators as before for numerotopy).
+
+### VOTC topography and the Visual Word Form Area
+
+A closely related topic is that of the so-called Visual Word Form Area, which, with the benefit of insight and despite its discoverers best intent upon naming it, is neither visual (congenital blind subjects have it too), word specific (it is also active for individual letters), nor a single area (it appears to be organized in patches). But names have great inertia, and this one does convey well the idea of a localized region selective for stimuli related to words. There is currently no model of the VWFA that can account for its specific place within the topography of vOTC. The following figure describes what a reset network of the VWFA could look like.
+
+![reset_vwfa](https://user-images.githubusercontent.com/13241166/141659718-402bf570-4242-4f5b-a6ab-2109511729ea.png)
+
+
+
+
 
 ## References
 [1] Patel GH, Kaplan DM, Snyder LH. Topographic organization in the brain: searching for general principles. Trends Cogn Sci. 2014;18(7):351-363. doi:10.1016/j.tics.2014.03.008
