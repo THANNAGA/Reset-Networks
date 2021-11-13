@@ -2,15 +2,17 @@
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1-iUCNMw8Ry-y4PF0xu_jGFpx0ghjTp4i?usp=sharing)
 
 ## What is a reset network?
-A reset network is a composition of neural networks in which non-spatial channels are reset into a spatial map, at least once during the course of computations.
+A reset network is a composition of several levels of neural networks, in which non-spatial outputs at one level are reshaped into a spatial map which serves as input for the next level of networks.
 
 ![reset_networks_gen](https://user-images.githubusercontent.com/13241166/140661564-94a53cde-32c2-4b81-b4b6-db2c2fcb58fa.png)
 
-The general form of a Reset network is shown in the figure above. It has an arbitrary depth of levels, each level consisting of a number of networks operating in parallel on the same input.
+The general form of a Reset network is shown in the figure above. It has an arbitrary depth of levels, each consisting of several networks operating in parallel on the same input.
 
-Reset networks include in particular the following family of depth 2, where level 1 is obtained by reshaping and concatenating the outputs of nxn parallel networks into a single map, which serves as input for a unique -master- network:
+Reset networks include in particular the following family of depth 2, where level 1 is obtained by reshaping and concatenating the outputs of nxn parallel networks into a single map, called the grid hereafter, which then serves as input for a final network:
 
 ![reset_networks_2](https://user-images.githubusercontent.com/13241166/140658409-e557f449-8af9-46a2-a405-6c62fc45687d.png)
+
+The master network forces the grid of subnetworks below to organize in order to solve the task, distributing work in a way that creates topography.
 
 The notebooks hosted in this Github and on Google Colab demonstrate that Reset networks can perform classification at scale -which arguably is not so suprising- while also exhibiting emergent topographic organization at each level. We further present evidence that this topography is of the kind needed to make sense of certain phenomena in the visual cortex of mammals.
 
