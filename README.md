@@ -24,14 +24,15 @@ In parietal cortex, voxels selective for similar numbers are more likely to be c
 
 ![Reset_numerotopy](https://user-images.githubusercontent.com/13241166/141204652-fa07b2f1-b3dd-4043-98e3-dd7da3caf01c.png)
 
-Number topgraphy is clearly visible on the map of number preferences, and is quantified in the middle plot above, where it can also be seen to emerge quickly during training. Topography and neighborhood similarity (right plot) are both quite significantly above the levels obtained for shuffled selectivity maps. Also notable is the tendency of subnetworks to specialize for specific numbers, or in the same ballpark.
+Number topography is clearly visible on the map of number preferences, and is quantified in the middle plot above, where it can also be seen to emerge quickly during training. Topography and neighborhood similarity (right plot) are both quite significantly above the levels obtained for shuffled selectivity maps. Also notable is the tendency of subnetworks to specialize for specific numbers, or in the same ballpark.
 
 ### Topography for categorical areas in ventral occipitotemporal cortex
 
-In ventral occipitotemporal cortex, more than two decades of studies have established the presence of areas selective for faces, tools, houses, and words. 
-Several models now reproduce caracteristics of vOTC, but as far as I know, only one [3] achieves both topography and scale at the same time - with I would argue topography emerging in a conceptually problematic way. 
+In ventral occipitotemporal cortex, more than two decades of studies have established the presence of areas selective for various widespread visual categories, in particular faces, bodies, tools, houses, and words. While ther is no shortage of computational models able to reproduce many caracteristics of the visual system, including vOTC, only one [3] achieves both topography and scale at the same time - with topography being problematic as it emerges from two different notions of space. Reset networks achieve topography at scale in a conceptually simple way.
 
 ![Reset network for vOTC](https://user-images.githubusercontent.com/13241166/141536355-621178f4-555b-4863-8639-be40cb61c21c.png)
+
+The left pannel in the figure shows a Reset network classifier trained on Cifar-100. The right pannel shows category preferences on the grid after training. Only 3 categories are considered - objects, houses and people - which were obtained by agregating the relevant cifar-100 classes. Clustering is visible in the map, and quantified in the subplots above (although with different indicators as before for numerotopy).
 
 ## References
 [1] Patel GH, Kaplan DM, Snyder LH. Topographic organization in the brain: searching for general principles. Trends Cogn Sci. 2014;18(7):351-363. doi:10.1016/j.tics.2014.03.008
