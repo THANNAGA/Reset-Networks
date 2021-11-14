@@ -38,7 +38,7 @@ The left pannel in the figure shows a Reset network classifier trained on Cifar-
 
 ### VOTC topography and the Visual Word Form Area
 
-A closely related topic is that of the so-called Visual Word Form Area, which, with the benefit of insight and despite its discoverers best intent upon naming it, is neither visual (congenital blind subjects have it too), word specific (it is also active for individual letters), nor a single area (it appears to be organized in patches). But names have great inertia, and this one does convey well the idea of a localized region selective for stimuli related to words. There is currently no model of the VWFA that can account for its specific place within the topography of vOTC. The following figure describes what a reset network of the VWFA could look like.
+A closely related topic is that of the so-called Visual Word Form Area, which, with the benefit of insight and despite its discoverers best intent upon naming it, is neither visual (congenital blind subjects have it too), word specific (it is also active for individual letters), nor a single area (it appears to be organized in patches). But names have great inertia, and this one does convey well the idea of a localized region selective for stimuli related to words. While meefforts have gone into modeling the VWFA [4], currently no model can account for its specific place within the topography of vOTC. The following figure describes what a reset network of the VWFA could look like.
 
 ![reset_vwfa](https://user-images.githubusercontent.com/13241166/141659718-402bf570-4242-4f5b-a6ab-2109511729ea.png)
 
@@ -52,5 +52,8 @@ A closely related topic is that of the so-called Visual Word Form Area, which, w
 [2] Hannagan T, Nieder A, Viswanathan P, Dehaene S. A random-matrix theory of the number sense. Phil. Trans. R. Soc. B. 2018;373:20170253.
 http://doi.org/10.1098/rstb.2017.0253
 
-[3] Lee H, Margalit E, Jozwik KM, Cohen MA, Kanwisher N, Yamins DL, DiCarlo JJ. (2020). Topographic deep artificial neural networks reproduce the 
-hallmarks of the primate inferior temporal cortex face processing network. ![bioRxiv](https://www.biorxiv.org/content/10.1101/2020.07.09.185116v1.full.pdf). 
+[3] Lee H, Margalit E, Jozwik KM, Cohen MA, Kanwisher N, Yamins DL, DiCarlo JJ. Topographic deep artificial neural networks reproduce the 
+hallmarks of the primate inferior temporal cortex face processing network. 2020 ![bioRxiv](https://www.biorxiv.org/content/10.1101/2020.07.09.185116v1.full.pdf). 
+
+[4] Hannagan T, Agrawal A., Cohen L, Dehaene S. Emergence of a compositional neural code for written words: Recycling of a convolutional neural network for reading. Proceedings of the National Academy of Sciences Nov 2021, 118 (46) e2104779118; ![DOI: 10.1073/pnas.2104779118](https://www.pnas.org/content/118/46/e2104779118)
+
