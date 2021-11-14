@@ -46,15 +46,15 @@ First, this Reset network would have 2 intermediate grids, P and A, standing for
 
 
 ## References
-[1] Patel GH, Kaplan DM, Snyder LH. Topographic organization in the brain: searching for general principles. Trends Cogn Sci. 2014;18(7):351-363. doi:10.1016/j.tics.2014.03.008
+[1] Patel GH, Kaplan DM, Snyder LH. Topographic organization in the brain: searching for general principles. Trends Cogn Sci. 2014;18(7):351-363. ![doi:10.1016/j.tics.2014.03.008](https://pubmed.ncbi.nlm.nih.gov/24862252/)
 
 [2] Hannagan T, Nieder A, Viswanathan P, Dehaene S. A random-matrix theory of the number sense. Phil. Trans. R. Soc. B. 2018;373:20170253.
-http://doi.org/10.1098/rstb.2017.0253
+![doi:10.1098/rstb.2017.0253](https://royalsocietypublishing.org/doi/10.1098/rstb.2017.0253)
 
 [3] Lee H, Margalit E, Jozwik KM, Cohen MA, Kanwisher N, Yamins DL, DiCarlo JJ. Topographic deep artificial neural networks reproduce the 
 hallmarks of the primate inferior temporal cortex face processing network. 2020 ![bioRxiv](https://www.biorxiv.org/content/10.1101/2020.07.09.185116v1.full.pdf). 
 
-[4] Hannagan T, Agrawal A., Cohen L, Dehaene S. Emergence of a compositional neural code for written words: Recycling of a convolutional neural network for reading. Proceedings of the National Academy of Sciences Nov 2021, 118 (46) e2104779118; ![DOI: 10.1073/pnas.2104779118](https://www.pnas.org/content/118/46/e2104779118)
+[4] Hannagan T, Agrawal A., Cohen L, Dehaene S. Emergence of a compositional neural code for written words: Recycling of a convolutional neural network for reading. Proceedings of the National Academy of Sciences Nov 2021, 118 (46) e2104779118; ![doi: 10.1073/pnas.2104779118](https://www.pnas.org/content/118/46/e2104779118)
 
 [5] Op de Beeck HP, Pillet I, Ritchie JB. Factors Determining Where Category-Selective Areas Emerge in Visual Cortex. Trends Cogn Sci. 2019 Sep;23(9):784-797. ![doi: 10.1016/j.tics.2019.06.006.](https://pubmed.ncbi.nlm.nih.gov/31327671/)
 
