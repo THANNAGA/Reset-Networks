@@ -1,7 +1,7 @@
 # Reset Networks : Towards topography at scale
 
 ## What is a Reset network?
-A Reset network is a composition of several neural networks (typically several levels of CNNs), in which the outputs of all networks at one level are reshaped into a spatial map which serves as input for the next level. The seed for this idea came from multiple discussions with ![Thibault Fouqueray](https://www.linkedin.com/in/thibault-fouqueray/?originalSubdomain=fr)(Stellantis), on how to implement a neural space where networks that perform similar tasks end-up being neighbors.
+A Reset network is a composition of several neural networks - typically several levels of CNNs - where outputs at one level are reshaped into a spatial map before serving as input for the next level. The seed for this idea came from multiple discussions with ![Thibault Fouqueray](https://www.linkedin.com/in/thibault-fouqueray/?originalSubdomain=fr)(Stellantis), on how to implement a neural space where networks performing similar tasks would end-up being neighbors.
 
 <img src="https://user-images.githubusercontent.com/13241166/140661564-94a53cde-32c2-4b81-b4b6-db2c2fcb58fa.png" width="500" height="700" />
 
@@ -44,6 +44,20 @@ A closely related topic is that of the so-called Visual Word Form Area, which, w
 
 First, this Reset network would have 2 intermediate grids, P and A, standing for the posterior and anterior axis in vOTC. This is not an innovation, but now Reset networks allow for something interesting to happen. In addition to the posterior-to-anterior gradient, we can capture a lateral-to-medial gradient by ensuring that networks in the P grid see different parts of the input depending on where they are: left-located (lateral) networks on the P grid would receive input from the center of the image, whereas right-located (medial) networks would receive input from the periphery. In other words, we build into the model a lateral-to-medial gradient in vOTC by exploiting its well-documented correspondence with center/periphery processing [5]. We insist that such a relation cannot easily be built into a CNN, because of location invariance.
 
+## Discussion
+
+We have showed that Reset networks can classify standard datasets such as MNIST, CIFAR 10, and CIFAR 100. This is encouraging while not surprising, given that in our simulations each sub-network was based on Resnet-20. Actually at this stage the classification performance of Reset networks is disappointing, since they can only at best match Resnet performance while having many more parameters.
+
+More interestingly, Reset networks constitute a novel mechanism for topography to emerge in deep learning. We have shown that they can reproduce at least two examples of topographic organization: in parietal cortex for numbers, and in ventral Occipitotemporal cortex for the so-called "categorical areas". 
+
+Reset networks also provide a way to implement the observed mappings "foveal input/lateral cortex" and "peripheral input/medial cortex" in visual cortex, which are not easily captured within the standard assumptions of CNNs.
+
+Finally, in unreported simulations, we show that Reset networks based on small subnetworks perform much better when engaged in auto-encoding the input in addition to classifying it. Auto-encoding in this situation appears to act as a powerful regularizer fro classification, forcing the error gradient to be distributed across the whole grid rather than to be drawn by one or few subnetworks. 
+
+## Conclusion
+
+Reset networks show that topography naturally emerges in deep CNN classifiers when they are composed with one another. In this view, the topographic cortex should not be modeled as a single classifier, however deep and richly organized, but as a sequence of levels of neural network classifiers. This predicts that the outputs of CNN classifiers are either spatially organized, or somehow reshaped spatially during the course of composition.
+
 
 ## References
 [1] Patel GH, Kaplan DM, Snyder LH. Topographic organization in the brain: searching for general principles. Trends Cogn Sci. 2014;18(7):351-363. ![doi:10.1016/j.tics.2014.03.008](https://pubmed.ncbi.nlm.nih.gov/24862252/)
@@ -57,4 +71,6 @@ hallmarks of the primate inferior temporal cortex face processing network. 2020 
 [4] Hannagan T, Agrawal A., Cohen L, Dehaene S. Emergence of a compositional neural code for written words: Recycling of a convolutional neural network for reading. Proceedings of the National Academy of Sciences Nov 2021, 118 (46) e2104779118; ![doi: 10.1073/pnas.2104779118](https://www.pnas.org/content/118/46/e2104779118)
 
 [5] Op de Beeck HP, Pillet I, Ritchie JB. Factors Determining Where Category-Selective Areas Emerge in Visual Cortex. Trends Cogn Sci. 2019 Sep;23(9):784-797. ![doi: 10.1016/j.tics.2019.06.006.](https://pubmed.ncbi.nlm.nih.gov/31327671/)
+
+[6] Le L, Patterson A, White M. Supervised autoencoders: Improving generalization performance with unsupervised regularizers. In ![Advances in Neural Information Processing Systems. 2018. 107–117](https://proceedings.neurips.cc/paper/2018/file/2a38a4a9316c49e5a833517c45d31070-Paper.pdf).
 
