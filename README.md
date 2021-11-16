@@ -46,18 +46,30 @@ First, this Reset network would have 2 intermediate grids, P and A, standing for
 
 ## Discussion
 
+### Classification
 We have showed that Reset networks can classify standard datasets such as MNIST, CIFAR 10, and CIFAR 100. This is encouraging while not surprising, given that in our simulations each sub-network was based on Resnet-20. Actually at this stage the classification performance of Reset networks is disappointing, since they can only at best match Resnet performance while having many more parameters.
 
+### Topography
 More interestingly, Reset networks constitute a novel mechanism for topography to emerge in deep learning. We have shown that they can reproduce at least two examples of topographic organization: in parietal cortex for numbers, and in ventral Occipitotemporal cortex for the so-called "categorical areas". 
 
-Reset networks also provide a way to implement the observed mappings "foveal input/lateral cortex" and "peripheral input/medial cortex" in visual cortex, which are not easily captured within the standard assumptions of CNNs.
+### Cortical gradients
+A related point is that Reset networks provide a way to implement the mapping between foveal/peripheral input and lateral/medial in visual cortex, which are not easily captured within the standard assumptions of CNNs.
 
-Finally, in unreported simulations, we show that Reset networks based on small subnetworks perform much better when engaged in auto-encoding the input in addition to classifying it. Auto-encoding in this situation appears to act as a powerful regularizer fro classification, forcing the error gradient to be distributed across the whole grid rather than to be drawn by one or few subnetworks. 
+### Regularization by auto-encoding
+In unreported simulations, we show that Reset networks based on small subnetworks perform much better when engaged in auto-encoding the input in addition to classifying it. Auto-encoding in this situation appears to act as a powerful regularizer fro classification, forcing the error gradient to be distributed across the whole grid rather than to be drawn by one or few subnetworks. 
+
+### Adding new levels: the depth of Reset networks
+Yet unexplored in Reset networks is a view of neural development in which, rather than recycling extant neural material, neural levels are added to the system as they are needed, deepening the network.
+
+### Adding new networks: the width of Reset networks
+Within the developmental perspective above, where new levels are added when necessary, it is to be noted that different networks from a given level can be trained on different tasks. Learning a new task could thus require only to widen the network, not to make it deeper.
 
 ## Conclusion
 
 Reset networks show that topography naturally emerges in deep CNN classifiers when they are composed with one another. In this view, the topographic cortex should not be modeled as a single classifier, however deep and richly organized, but as a sequence of levels of neural network classifiers. This predicts that the outputs of CNN classifiers are either spatially organized, or somehow reshaped spatially during the course of composition.
 
+## Citation
+Hannagan T. Reset networks: Topography at scale. bioRxiv.
 
 ## References
 [1] Patel GH, Kaplan DM, Snyder LH. Topographic organization in the brain: searching for general principles. Trends Cogn Sci. 2014;18(7):351-363. ![doi:10.1016/j.tics.2014.03.008](https://pubmed.ncbi.nlm.nih.gov/24862252/)
