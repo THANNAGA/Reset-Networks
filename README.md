@@ -1,7 +1,7 @@
 # Reset Networks : Towards topography at scale
 
 ## What is a Reset network?
-A Reset network is a composition of several neural networks - typically several levels of CNNs - where outputs at one level are reshaped into a spatial map before serving as input for the next level. The seed for this idea came from multiple discussions with ![Thibault Fouqueray](https://www.linkedin.com/in/thibault-fouqueray/?originalSubdomain=fr)(Stellantis), on how to implement a neural space where networks performing similar tasks would end-up being neighbors.
+A Reset network is a composition of several neural networks - typically several levels of CNNs - where outputs at one level are reshaped into a spatial input for the next level. The seed for this idea came from multiple discussions with ![Thibault Fouqueray](https://www.linkedin.com/in/thibault-fouqueray/?originalSubdomain=fr)(Stellantis), on how to implement a neural space where networks performing similar tasks would end-up being neighbors.
 
 <img src="https://user-images.githubusercontent.com/13241166/140661564-94a53cde-32c2-4b81-b4b6-db2c2fcb58fa.png" width="500" height="700" />
 
@@ -46,17 +46,18 @@ First, this Reset network would have 2 intermediate grids, P and A, standing for
 
 ## Discussion
 
-### Classification
-We have showed that Reset networks can classify standard datasets such as MNIST, CIFAR 10, and CIFAR 100. This is encouraging while not surprising, given that in our simulations each sub-network was based on Resnet-20. Actually at this stage the classification performance of Reset networks is disappointing, since they can only at best match Resnet performance while having many more parameters.
+### Classification performance
+We have showed that Reset networks can classify a standard computer vision dataset such as CIFAR 100. However and as the figure below shows, at this stage their classification is disappointing, only at best matching the performance of a single Resnet 20, while having many more parameters. 
 
-### Topography
-More interestingly, Reset networks constitute a novel mechanism for topography to emerge in deep learning. We have shown that they can reproduce at least two examples of topographic organization: in parietal cortex for numbers, and in ventral Occipitotemporal cortex for the so-called "categorical areas". 
+![Reset performance Cifar10Cifar100](https://user-images.githubusercontent.com/13241166/142236705-d5fc62b5-496b-4435-8e5e-14d748bdd022.png)
 
-### Cortical gradients
-A related point is that Reset networks provide a way to implement the mapping between foveal/peripheral input and lateral/medial in visual cortex, which are not easily captured within the standard assumptions of CNNs.
+One reason could be that in our simulations, spatial resets between levels were always done by reshaping the subnetworks' outputs, which constitute an information botteneck. Reshaping prior to the subnetwork's output, e.g. the dense layer or before, might be a more astute choice. We also observe that the full resources of the Reset network don't seem to be used: some subnetwork units are more active than others. This can be alleviated to some extent by using dropout, or another kind of regularization on the grid.
 
 ### Regularization by auto-encoding
-In unreported simulations, we show that Reset networks based on small subnetworks perform much better when engaged in auto-encoding the input in addition to classifying it. Auto-encoding in this situation appears to act as a powerful regularizer fro classification, forcing the error gradient to be distributed across the whole grid rather than to be drawn by one or few subnetworks. 
+In unreported simulations, we observed that Reset networks based on smaller subnetworks then Reset20 performed much better when the second level had 2 networks: one that classifies the input, and another than tries to reconstruct the input from the grid. grid (auto-encoding). Auto-encoding in this situation appears to act as a powerful regularizer for classification, forcing the error gradient to be distributed across the whole grid rather than to be drawn by one or just a few subnetworks. Such regularization effects of auto-encoding has been reported for standard classifiers [6].
+
+### Topography
+Reset networks constitute a novel mechanism for topography to emerge in deep learning. We have presented solid evidence that they can reproduce at least two examples of topographic organization: in parietal cortex for numbers, and in ventral Occipitotemporal cortex for the so-called "categorical areas". A related point is that Reset networks provide a way to implement a cortical graident, the mapping between foveal/peripheral input and lateral/medial in visual cortex, which is not easily captured within the standard assumptions of CNNs.
 
 ### Adding new levels: the depth of Reset networks
 Yet unexplored in Reset networks is a view of neural development in which, rather than recycling extant neural material, neural levels are added to the system as they are needed, deepening the network.
@@ -66,7 +67,7 @@ Within the developmental perspective above, where new levels are added when nece
 
 ## Conclusion
 
-Reset networks show that topography naturally emerges in deep CNN classifiers when they are composed with one another. In this view, the topographic cortex should not be modeled as a single classifier, however deep and richly organized, but as a sequence of levels of neural network classifiers. This predicts that the outputs of CNN classifiers are either spatially organized, or somehow reshaped spatially during the course of composition.
+Reset networks show that topography has to emerge in deep CNN classifiers when they are composed with one another. In this view, the topographic cortex should not be modeled as a single classifier, however deep and richly organized, but as a sequence of levels of neural network classifiers. This rests on the idea that the cortex has the ability to compose networks with one another if need be, and predicts that the outputs or the late computational stages of cortical classifiers are either spatially organized, or somehow reshaped spatially during the course of composition.
 
 ## Citation
 Hannagan T. Reset networks: Topography at scale. bioRxiv.
