@@ -7,7 +7,7 @@ A Reset network is a composition of several neural networks - typically several 
 
 The general form of a Reset network is shown in the figure above. It has an arbitrary depth of levels, each consisting of several networks operating in parallel on the same input.
 
-Reset networks include in particular the following family of depth 2, where level 1 is obtained by reshaping and concatenating the outputs of nxn parallel networks into a single map, called "grid" hereafter, which then serves as input for a final network:
+Reset networks include in particular the following family of depth 2, where level 1 is obtained by reshaping and concatenating the outputs of nxn parallel networks into a single map, called "grid" hereafter, which then serves as input for a final network.
 
 ![reset_networks_2](https://user-images.githubusercontent.com/13241166/140658409-e557f449-8af9-46a2-a405-6c62fc45687d.png)
 
@@ -29,7 +29,7 @@ Number topography is clearly visible on the map of number preferences, and is qu
 
 ### Topography for categorical areas in ventral occipitotemporal cortex [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1RhRNCYmUEr1lppWrtrmoJaPbCv9XQR4X)
 
-In ventral occipitotemporal cortex, more than two decades of studies have established the presence of areas selective for various widespread visual categories, in particular faces, bodies, tools, houses, and words. While there is no shortage of computational models able to reproduce many caracteristics of the visual system, including some of vOTC, only one [3] achieves both topography and scale at the same time - with topography being problematic as it emerges from two different notions of space. Reset networks achieve topography at scale in a conceptually simple way.
+In ventral occipitotemporal cortex, more than two decades of studies have established the presence of areas selective for various widespread visual categories, in particular faces, bodies, tools, houses, and words. While there is no shortage of computational models able to reproduce many caracteristics of the visual system, including some of vOTC, only one [3] achieves both topography and scale at the same time - with topography being problematic as it requires two different notions of space to coexist. By contrast, the way Reset networks achieve topography at scale is conceptually straightforward.
 
 ![Reset network for vOTC](https://user-images.githubusercontent.com/13241166/141536355-621178f4-555b-4863-8639-be40cb61c21c.png)
 
@@ -37,7 +37,7 @@ The left pannel in the figure shows a Reset network classifier trained on Cifar-
 
 ### VOTC topography and the Visual Word Form Area - with ![Florence Bouhali](https://scholar.google.fr/citations?user=0J6-PIsAAAAJ&hl=en)
 
-A closely related topic is that of the so-called Visual Word Form Area, which, with the benefit of insight and despite its discoverers' best intent upon naming it, is neither visual (congenital blind subjects have it too), word-level specific (it is also active for individual letters), nor a single area (it appears to be organized in patches). But names have great inertia, and this one does convey well the idea of a localized region selective for stimuli related to words. While some efforts have gone into modeling the VWFA [4], currently no model can account for its specific place within the topography of vOTC. The following network, designed with ![Florence Bouhali](https://scholar.google.fr/citations?user=0J6-PIsAAAAJ&hl=en), describes what a Reset network of the VWFA could look like.
+A closely related topic is that of the so-called Visual Word Form Area, which, with the benefit of insight and despite its discoverers' best intent upon naming it, is neither visual (congenital blind subjects have it too), word-level specific (it is also active for individual letters), nor actually a single area (it appears to be organized in patches). But names have great inertia, and this one does convey well the idea of a localized region selective for stimuli related to words. While some efforts have gone into modeling the VWFA [4], currently no model can account for its specific place within the topography of vOTC. The following network, designed with ![Florence Bouhali](https://scholar.google.fr/citations?user=0J6-PIsAAAAJ&hl=en), describes what a Reset network of the VWFA could look like.
 
 <img src="https://user-images.githubusercontent.com/13241166/141679793-4c477a7f-3f69-498c-b634-4ba9d9be1ab1.png" width="500" height="700" />
 
@@ -47,27 +47,23 @@ First, this Reset network would have 2 intermediate grids, P and A, standing for
 ## Discussion
 
 ### Classification performance
-We have showed that Reset networks can classify a standard computer vision dataset such as CIFAR 100. However and as the figure below shows, at this stage their classification is disappointing, only at best matching the performance of a single Resnet 20, while having many more parameters. 
+We have showed that Reset networks can classify standard computer vision datasets such as CIFAR. However and as the figure below shows, at this stage their performance is disappointing, only at best matching that of a single Resnet 20, while having many more parameters. 
 
 ![Reset performance Cifar10Cifar100](https://user-images.githubusercontent.com/13241166/142236705-d5fc62b5-496b-4435-8e5e-14d748bdd022.png)
 
 One reason could be that in our simulations, spatial resets between levels were always done by reshaping the subnetworks' outputs, which constitute an information botteneck. Reshaping prior to the subnetwork's output, e.g. the dense layer or before, might be a more astute choice. We also observe that the full resources of the Reset network don't seem to be used: some subnetwork units are more active than others. This can be alleviated to some extent by using dropout, or another kind of regularization on the grid.
 
 ### Regularization by auto-encoding
-In unreported simulations, we observed that Reset networks based on smaller subnetworks then Reset20 performed much better when the second level had 2 networks: one that classifies the input, and another than tries to reconstruct the input from the grid. grid (auto-encoding). Auto-encoding in this situation appears to act as a powerful regularizer for classification, forcing the error gradient to be distributed across the whole grid rather than to be drawn by one or just a few subnetworks. Such regularization effects of auto-encoding has been reported for standard classifiers [6].
+In the course of our investigations (not shown here), we observed that Reset networks that were based on smaller subnetworks than Reset20, performed much better when the second level had 2 networks: one that classified the input, and another that tried to reconstruct the input from the grid. Auto-encoding in this situation appears to act as an efficient regularizer for classification, forcing the error gradient to be distributed across the whole grid rather than to be drawn by one, or just a few subnetworks. Such regularization effects of auto-encoding have been reported before for standard classifiers [6].
 
 ### Topography
-Reset networks constitute a novel mechanism for topography to emerge in deep learning. We have presented solid evidence that they can reproduce at least two examples of topographic organization: in parietal cortex for numbers, and in ventral Occipitotemporal cortex for the so-called "categorical areas". A related point is that Reset networks provide a way to implement a cortical graident, the mapping between foveal/peripheral input and lateral/medial in visual cortex, which is not easily captured within the standard assumptions of CNNs.
+Reset networks constitute a novel mechanism for topography to emerge in deep learning. We have presented solid evidence that they can reproduce at least two examples of topographic organization: in parietal cortex for numbers, and in ventral Occipitotemporal cortex for the so-called "categorical areas". A related point is that Reset networks provide a way to implement a cortical gradient, the mapping between foveal/peripheral input and lateral/medial in visual cortex, which is not easily captured within the standard assumptions of CNNs.
 
-### Adding new levels: the depth of Reset networks
-Yet unexplored in Reset networks is a view of neural development in which, rather than recycling extant neural material, neural levels are added to the system as they are needed, deepening the network.
-
-### Adding new networks: the width of Reset networks
-Within the developmental perspective above, where new levels are added when necessary, it is to be noted that different networks from a given level can be trained on different tasks. Learning a new task could thus require only to widen the network, not to make it deeper.
+### Adding networks when necessary: the width and depth of Reset networks
+Reset networks align well with a view of neural development in which, as an alternative to recycling extant neural material, neural resources can also be recruited in the system if needed. Learning a new task could thus require only to widen the system by adding a network at the current level, with different networks possibly trained on different tasks. If expertise from previously learned tasks is required, the system can be made deeper by reshaping network outputs at the current level and creating a new level.
 
 ## Conclusion
-
-Reset networks show that topography has to emerge in deep CNN classifiers when they are composed with one another. In this view, the topographic cortex should not be modeled as a single classifier, however deep and richly organized, but as a sequence of levels of neural network classifiers. This rests on the idea that the cortex has the ability to compose networks with one another if need be, and predicts that the outputs or the late computational stages of cortical classifiers are either spatially organized, or somehow reshaped spatially during the course of composition.
+Reset networks show that topography must emerge in deep CNN classifiers, when composed with one another. In this view, the topographic cortex should not be modeled as a single classifier, however deep and richly organized, but as a sequence of levels of neural network classifiers. This rests on the idea that the cortex has the ability to compose networks with one another if need be, and predicts that the outputs, or the late computational stages, of cortical classifiers are either spatially organized, or somehow reshaped spatially during the course of composition.
 
 ## Citation
 Hannagan T. Reset networks: Topography at scale. bioRxiv.
