@@ -66,7 +66,7 @@ Reset networks align well with a view of neural development in which, as an alte
 Reset networks show that topography must emerge in deep CNN classifiers, when composed with one another. In this view, the topographic cortex should not be modeled as a single classifier, however deep and richly organized, but as a sequence of levels of neural network classifiers. This rests on the idea that the cortex has the ability to compose networks with one another if need be, and predicts that the outputs, or the late computational stages, of cortical classifiers are either spatially organized, or somehow reshaped spatially during the course of composition.
 
 ## Citation
-Hannagan T. Reset networks: Topography at scale. bioRxiv.
+Hannagan T. Reset networks: Topography at scale. BIORXIV/2021/469308
 
 ## References
 [1] Patel GH, Kaplan DM, Snyder LH. Topographic organization in the brain: searching for general principles. Trends Cogn Sci. 2014;18(7):351-363. ![doi:10.1016/j.tics.2014.03.008](https://pubmed.ncbi.nlm.nih.gov/24862252/)
