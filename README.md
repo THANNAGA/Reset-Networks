@@ -1,7 +1,7 @@
 # Reset Networks : Towards topography at scale
 
 ## What is a Reset network?
-A Reset network is a composition of several neural networks - typically several levels of CNNs - where outputs at one level are reshaped into a spatial input for the next level. The seed for this idea came from multiple discussions with ![Thibault Fouqueray](https://www.linkedin.com/in/thibault-fouqueray/?originalSubdomain=fr)(Stellantis), on how to implement a neural space where networks performing similar tasks would end-up being neighbors.
+A Reset network is a composition of several neural networks - typically several levels of CNNs - where outputs at one level are reshaped into a spatial input for the next level. The seed for this idea came from multiple discussions with ![Thibault Fouqueray](https://www.linkedin.com/in/thibault-fouqueray/?originalSubdomain=fr) (Stellantis), on how to implement a neural space where networks performing similar tasks would end-up being neighbors.
 
 <img src="https://user-images.githubusercontent.com/13241166/140661564-94a53cde-32c2-4b81-b4b6-db2c2fcb58fa.png" width="500" height="700" />
 
@@ -66,7 +66,7 @@ Reset networks align well with a view of neural development in which, as an alte
 Reset networks show that topography must emerge in deep CNN classifiers, when composed with one another. In this view, the topographic cortex should not be modeled as a single classifier, however deep and richly organized, but as a sequence of levels of neural network classifiers. This rests on the idea that the cortex has the ability to compose networks with one another if need be, and predicts that the outputs, or the late computational stages, of cortical classifiers are either spatially organized, or somehow reshaped spatially during the course of composition.
 
 ## Citation
-Hannagan T. Reset networks: Topography at scale. BIORXIV/2021/469308
+Hannagan T. Reset networks: Topography at scale. ![bioRxiv 2021.11.19.469308; doi: https://doi.org/10.1101/2021.11.19.469308 ](https://www.biorxiv.org/content/10.1101/2021.11.19.469308v1)
 
 ## References
 [1] Patel GH, Kaplan DM, Snyder LH. Topographic organization in the brain: searching for general principles. Trends Cogn Sci. 2014;18(7):351-363. ![doi:10.1016/j.tics.2014.03.008](https://pubmed.ncbi.nlm.nih.gov/24862252/)
