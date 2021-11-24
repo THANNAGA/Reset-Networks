@@ -1,7 +1,8 @@
 # Reset Networks : rethinking the link between CNNs and the visual cortex
+Hannagan T. Reset Networks: Emergent Topography in Networks of Convolutional Neural Networks. [bioRxiv 2021.11.19.469308](https://www.biorxiv.org/content/10.1101/2021.11.19.469308v2)
 
 ## What is a Reset network?
-A Reset network is a composition of several neural networks - typically several levels of CNNs - where outputs at one level are reshaped into a spatial input for the next level. The seed for this idea came from multiple discussions with ![Thibault Fouqueray](https://www.linkedin.com/in/thibault-fouqueray/?originalSubdomain=fr) (Stellantis), on how to implement a neural space where networks performing similar tasks would end-up being neighbors.
+A Reset network is a composition of several neural networks - typically several levels of CNNs - where outputs at one level are reshaped into a spatial input for the next level. The seed for this idea came from multiple discussions with [Thibault Fouqueray](https://www.linkedin.com/in/thibault-fouqueray/?originalSubdomain=fr) (Stellantis), on how to implement a neural space where networks performing similar tasks would end-up being neighbors.
 
 <img src="https://user-images.githubusercontent.com/13241166/140661564-94a53cde-32c2-4b81-b4b6-db2c2fcb58fa.png" width="500" height="700" />
 
@@ -13,7 +14,7 @@ Reset networks include in particular the following family of depth 2, where leve
 
 The master network forces the grid of subnetworks underneath to organize in order to solve the task, distributing work in a way that creates topography.
 
-The notebooks hosted in this Github and on Google Colab demonstrate that Reset networks can perform classification at scale -which arguably is not so suprising- while also exhibiting emergent topographic organization at each level. We further present evidence that this topography is of the kind needed to make sense of certain phenomena in the visual cortex of mammals.
+The notebooks hosted in this Github and on Google Colab demonstrate that Reset networks can perform classification at scale -which arguably is not so suprising- while also exhibiting emergent topographic organization at each level. 
 
 ## Why are Reset networks relevant to cortical topography?
 
