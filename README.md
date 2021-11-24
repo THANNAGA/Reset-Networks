@@ -1,5 +1,5 @@
 # Reset Networks : rethinking the link between CNNs and the visual cortex
-Hannagan T. Reset Networks: Emergent Topography in Networks of Convolutional Neural Networks. [bioRxiv 2021.11.19.469308](https://www.biorxiv.org/content/10.1101/2021.11.19.469308v2){:target="_blank" rel="noopener"}
+Hannagan T. Reset Networks: Emergent Topography in Networks of Convolutional Neural Networks. ![bioRxiv 2021.11.19.469308](https://www.biorxiv.org/content/10.1101/2021.11.19.469308v2)
 
 ## What is a Reset network?
 A Reset network is a composition of several neural networks - typically several levels of CNNs - where outputs at one level are reshaped into a spatial input for the next level. The seed for this idea came from multiple discussions with ![Thibault Fouqueray](https://www.linkedin.com/in/thibault-fouqueray/?originalSubdomain=fr) (Stellantis), on how to implement a neural space where networks performing similar tasks would end-up being neighbors.
