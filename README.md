@@ -50,7 +50,7 @@ First, this Reset network would have 2 intermediate grids, P and A, standing for
 ### Classification performance
 We have shown that Reset networks can classify standard computer vision datasets such as CIFAR. However and as the figure below shows, at this stage their performance is disappointing, only at best matching that of a single Resnet 20, while having many more parameters. 
 
-![Reset performance Cifar10Cifar100](https://user-images.githubusercontent.com/13241166/142236705-d5fc62b5-496b-4435-8e5e-14d748bdd022.png)
+![Reset performance Cifar10Cifar100](https://user-images.githubusercontent.com/13241166/143680476-ff8fd5eb-abce-40aa-8da9-a92edf0b0ed8.png)
 
 One reason could be that in our simulations, spatial resets between levels were always done by reshaping the subnetworks' outputs, which constitute an information botteneck. Reshaping prior to the subnetwork's output, e.g. the dense layer or before, might be a more astute choice. We also observe that the full resources of the Reset network don't seem to be used: some subnetwork units are more active than others. This can be alleviated to some extent by using dropout, or another kind of regularization on the grid.
 
