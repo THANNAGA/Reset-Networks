@@ -30,7 +30,7 @@ Number topography is clearly visible on the map of number preferences, and is qu
 
 ### Topography for categorical areas in ventral occipitotemporal cortex [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1RhRNCYmUEr1lppWrtrmoJaPbCv9XQR4X)
 
-In ventral occipitotemporal cortex, more than two decades of studies have established the presence of areas selective for various widespread visual categories, in particular faces, bodies, tools, houses, and words. While there is no shortage of computational models able to reproduce many caracteristics of the visual system, including some of vOTC, only one [3] achieves both topography and scale at the same time - with topography being problematic as it requires two different notions of space to coexist. By contrast, the way Reset networks achieve topography at scale is conceptually straightforward.
+In ventral occipitotemporal cortex, more than two decades of studies have established the presence of areas selective for various widespread visual categories, in particular faces, bodies, tools, houses, and words. While there is no shortage of computational models able to reproduce many caracteristics of the visual system, including some of vOTC, only one [3] achieves both topography and scale at the same time - with topography being problematic as it requires two different notions of space to coexist (thanks are due to Hyodong Lee for exchanges that provided useful information on Topographic Deep Artificial Neural Networks). By contrast, the way Reset networks achieve topography at scale is conceptually straightforward.
 
 ![Reset network for vOTC](https://user-images.githubusercontent.com/13241166/141536355-621178f4-555b-4863-8639-be40cb61c21c.png)
 
@@ -68,6 +68,7 @@ Reset networks show that topography must emerge in deep CNN classifiers, when co
 
 ## Citation
 Hannagan T. Reset networks: Topography at scale. [bioRxiv 2021.11.19.469308; doi: https://doi.org/10.1101/2021.11.19.469308 ](https://www.biorxiv.org/content/10.1101/2021.11.19.469308v1)
+
 
 ## References
 [1] Patel GH, Kaplan DM, Snyder LH. Topographic organization in the brain: searching for general principles. Trends Cogn Sci. 2014;18(7):351-363. [doi:10.1016/j.tics.2014.03.008](https://pubmed.ncbi.nlm.nih.gov/24862252/)
