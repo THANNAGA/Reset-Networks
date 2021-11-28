@@ -26,7 +26,7 @@ In parietal cortex, voxels selective for similar numbers are more likely to be c
 
 ![Reset_numerotopy](https://user-images.githubusercontent.com/13241166/141204652-fa07b2f1-b3dd-4043-98e3-dd7da3caf01c.png)
 
-Number topography is clearly visible on the map of number preferences, and is quantified in the middle plot above, where it can also be seen to emerge quickly during training. Topography and neighborhood similarity (right plot) are both quite significantly above the levels obtained for the same selectivity maps, but shuffled. Also notable is the tendency of subnetworks to specialize for specific numbers, or numbers in the same ballpark.
+Number topography is clearly visible on the map of number preferences, and is quantified in the middle plot above, where it can also be seen to emerge quickly during training. Topography and neighborhood similarity (right plot) are both quite significantly above the levels obtained for the same selectivity maps, but shuffled. Also notable is the tendency of subnetworks to specialize for specific numbers, or numbers in the same ballpark. Pretrained Reset networks are available in the folder ![Topography for numbers](https://github.com/THANNAGA/Reset-Networks/tree/main/Topography%20for%20numbers), as well as movies showing how number topography evolves during training of these networks.
 
 ### Topography for categorical areas in ventral occipitotemporal cortex [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1RhRNCYmUEr1lppWrtrmoJaPbCv9XQR4X)
 
@@ -35,6 +35,7 @@ In ventral occipitotemporal cortex, more than two decades of studies have establ
 ![Reset network for vOTC](https://user-images.githubusercontent.com/13241166/141536355-621178f4-555b-4863-8639-be40cb61c21c.png)
 
 The left pannel in the figure shows a Reset network classifier trained on Cifar-100. The right pannel shows category preferences on the grid after training. Only 3 categories are considered - objects, houses and people - which were obtained by agregating the relevant cifar-100 classes. Clustering is visible in the map, and quantified in the subplots above (although with different indicators as before for numerotopy).
+Again, pretrained Reset networks are available in the folder ![Topography for cifar100](https://github.com/THANNAGA/Reset-Networks/tree/main/Topography%20for%20cifar), as well as movies showing how topography evolves during training of these networks, for the 3 categories considered.
 
 ### VOTC topography and the Visual Word Form Area - with ![Florence Bouhali](https://scholar.google.fr/citations?user=0J6-PIsAAAAJ&hl=en)
 
