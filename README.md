@@ -35,7 +35,7 @@ In ventral occipitotemporal cortex, more than two decades of studies have establ
 ![Reset network for vOTC](https://user-images.githubusercontent.com/13241166/141536355-621178f4-555b-4863-8639-be40cb61c21c.png)
 
 The left pannel in the figure presents a Reset network classifier trained on Cifar-100. The right pannel shows category preferences on the grid after training. Only 3 categories are considered - objects, houses and people - which were obtained by agregating the relevant cifar-100 classes. Clustering is visible in the map, and quantified in the subplots above, although with slightly different indicators as before for numerotopy: we here use a simple thresholded d-prime to determine category preference (upper middle plot), and provide a density index (upper right plot) corresponding to the proportion of total activity on the map that falls within a given category.
-Again, pretrained Reset networks are available in the folder ![Topography for cifar100](https://github.com/THANNAGA/Reset-Networks/tree/main/Topography%20for%20cifar), as well as movies showing how topography evolves during training of these networks, for the 3 categories considered.
+Again, pretrained Reset networks are available in the folder ![Topography for cifar](https://github.com/THANNAGA/Reset-Networks/tree/main/Topography%20for%20cifar), as well as movies showing how topography evolves during training of these networks, for the 3 categories considered.
 
 ### VOTC topography and the Visual Word Form Area - with ![Florence Bouhali](https://scholar.google.fr/citations?user=0J6-PIsAAAAJ&hl=en)
 
