@@ -17,7 +17,7 @@ Reset networks include in particular the following family of depth 2, where leve
 
 The master network forces the grid of subnetworks underneath to organize in order to solve the task, distributing work in a way that creates topography. Exactly how this happens is still not clear, but the results below provide a few hints.
 
-The notebooks hosted in this Github and on Google Colab demonstrate that Reset networks can perform classification at scale -which arguably is not so suprising- while also exhibiting emergent topographic organization at each level. 
+The notebooks hosted in this Github and on Google Colab demonstrate that Reset networks can perform classification at scale -which arguably is not so suprising- while also exhibiting emergent topographic organization. 
 
 ## Reset networks show clustering for MNIST, Fashion MNIST and CIFAR-10
 
@@ -25,7 +25,7 @@ Let's start by training 3 Reset(8) networks, each on a classic computer vision d
 
 ![topography_across_domains](https://user-images.githubusercontent.com/13241166/145676025-584145c8-2980-4944-a85f-14d6e4d6872f.png)
 
-The upper plots present the class preference of each unit on the 32x32 grid of the trained model, whereas the lower plots quantify the amount of clustering on each map, at each point during training. 
+The upper plots present converged preference maps -the class preference of each unit on the 32x32 grid of the trained model- whereas the lower plots quantify the amount of clustering on each map, at each point during training. 
 
 A unit's preference is given by the highest d-prime, over each target class, of the unit's responses to this target class against all other classes. Clustering is defined as the average size, over all target classes, of the connected components present on the map for this class. More details can be found in the [paper](https://www.biorxiv.org/content/10.1101/2021.11.19.469308v3).
 
