@@ -39,7 +39,9 @@ Cortical topography in the strict sense is the notion that "nearby neurons in th
 
 ### Topography for numbers in parietal cortex [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1-iUCNMw8Ry-y4PF0xu_jGFpx0ghjTp4i?usp=sharing)
 
-In parietal cortex, voxels selective for similar numbers are more likely to be contiguous, a phenomenon which has only been partially explained as a planar diffusion process of number codes, using a random matrix model which was not designed to process real stimuli [2]. As the figure below shows, a Reset(8) Network with a single 8x8 grid,  can be trained to map images of numbers onto number codes, and succeeds in reproducing topographic organization. We emphasize that we would expect the same topography to emerge for classification of dots, or any kind of stimuli with countable objects.
+In parietal cortex, voxels selective for similar numbers are more likely to be contiguous. We have just seen that Reset networks will self-organize when trained to classify hand-written digits, but a classification task is not entirely satisfying from a neuroscientific point of view: it is very likely that kids map digits onto pre-existing (possibly innate!) number representations. The nature of these codes has been thoroughly studied in [2]: a lot of phenomena could be explained if number codes were sparsely distributed vectors, with exponentially more overlap between successive number codes as numbers increase. It would be more convincing if Reset networks could reproduce number topography by mapping digit images onto these realistic number codes.
+
+As the figure below shows, a Reset(8) Network with a single 8x8 grid,  can be trained to map images of digits onto number codes, and succeeds in reproducing topographic organization. We emphasize that we would expect the same topography to emerge for classification of dots, or any kind of stimuli with countable objects.
 
 ![Figure results number codes](https://user-images.githubusercontent.com/13241166/145191103-c99ca3d9-11c9-4f72-a0b1-9221342c4afe.png)
 
