@@ -65,7 +65,7 @@ First, this Reset network would have 2 intermediate grids, P and A, standing for
 ## Discussion
 
 ### Classification performance
-We have shown that Reset networks can classify standard computer vision datasets such as CIFAR. However and as the figure below shows, at this stage their performance is disappointing, only at best matching that of a single Resnet 20, while having many more parameters. 
+We have seen that Reset networks can classify standard computer vision datasets such as MNIST, Fashion MNIST, CIFAR-10 and CIFAR-100. However and as the figure below shows for the later 2 datasets, at this stage their performance is disappointing, only at best matching that of a single Resnet-20, while having many more parameters. 
 
 ![Reset performance Cifar10Cifar100](https://user-images.githubusercontent.com/13241166/143680476-ff8fd5eb-abce-40aa-8da9-a92edf0b0ed8.png)
 
@@ -79,10 +79,10 @@ In the course of our investigations, we observed that Reset networks that were b
 Such regularization effects from autoencoding have been reported before for standard classifiers [6]. The novelty in Reset networks is that input reconstruction must be accomplished using the information from the whole grid: this suggests that in visual cortex, some feedback connections between distal cortical areas actually function as regularizers of cortical spaces.
 
 ### Topography
-Reset networks constitute a novel mechanism for topography to emerge in deep learning. We have presented solid evidence that they can reproduce at least two examples of topographic organization: in parietal cortex for numbers, and in ventral Occipitotemporal cortex for the so-called "categorical areas". A related point is that Reset networks provide a way to implement a cortical gradient, the mapping between foveal/peripheral input and lateral/medial in visual cortex, which is not easily captured within the standard assumptions of CNNs.
+Reset networks constitute a novel mechanism for topography to emerge in deep learning. We have established that the networks self-organize for MNIST, Fashion MNIST and CIFAR. We then presented firm evidence that they could reproduce topographic organization in parietal cortex for realistic number codes, and in ventral Occipitotemporal cortex for the so-called "categorical areas". A related point is that Reset networks provide a way to implement a cortical gradient, the mapping between foveal/peripheral input and lateral/medial in visual cortex, which is not easily captured within the standard "one-CNN-fits-all" approach.
 
 ### Adding networks when necessary: the width and depth of Reset networks
-Reset networks align well with a view of neural development in which, as an alternative to recycling extant neural material, neural resources can also be recruited in the system if needed. Learning a new task could thus require only to widen the system by adding a network at the current level, with different networks possibly trained on different tasks. If expertise from previously learned tasks is required, the system can be made deeper by reshaping network outputs at the current level and creating a new level.
+Reset networks align well with a view of neural development in which, rather than or in addition to recycling extant neural material, neural resources can also be recruited in the system if needed. Learning a new task could thus require only to widen the system by adding a network at the current level, with different networks possibly trained on different tasks. If expertise from previously learned tasks is required, the system can be made deeper by reshaping network outputs at the current level and creating a new level.
 
 ## Conclusion
 Reset networks show that topography can emerge in deep CNN classifiers, when composed with one another. In this view, the topographic cortex should not be modeled as a single classifier, however deep and richly organized, but as a sequence of levels of neural network classifiers. This rests on the idea that the cortex has the ability to compose networks with one another if need be, and predicts that the outputs, or the late computational stages, of cortical classifiers are either spatially organized, or somehow reshaped spatially during the course of composition.
