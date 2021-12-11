@@ -1,6 +1,9 @@
 # Reset Networks : rethinking the link between CNNs and the visual cortex
 Hannagan T. Reset Networks: Emergent Topography in Networks of Convolutional Neural Networks. [bioRxiv 2021.11.19.469308](https://www.biorxiv.org/content/10.1101/2021.11.19.469308v3)
 
+## TL-DR
+If you stack CNNs on top of one another, they will self-organize topographically.
+
 ## What is a Reset network?
 A Reset network is a composition of several neural networks - typically several levels of CNNs - where outputs at one level are reshaped into a spatial input for the next level. The seed for this idea came from multiple discussions with [Thibault Fouqueray](https://www.linkedin.com/in/thibault-fouqueray/?originalSubdomain=fr) (Stellantis), on how to implement a neural space where networks performing similar tasks would end-up being neighbors, and I am also grateful to [Florence Bouhali](https://scholar.google.fr/citations?user=0J6-PIsAAAAJ&hl=en) (UCSF) for inputs and encouragements in the development of the approach.
 
@@ -12,13 +15,27 @@ Reset networks include in particular the following family of depth 2, where leve
 
 ![reset_networks_2](https://user-images.githubusercontent.com/13241166/140658409-e557f449-8af9-46a2-a405-6c62fc45687d.png)
 
-The master network forces the grid of subnetworks underneath to organize in order to solve the task, distributing work in a way that creates topography.
+The master network forces the grid of subnetworks underneath to organize in order to solve the task, distributing work in a way that creates topography. Exactly how this happens is still not clear, but the results below provide a few hints.
 
 The notebooks hosted in this Github and on Google Colab demonstrate that Reset networks can perform classification at scale -which arguably is not so suprising- while also exhibiting emergent topographic organization at each level. 
 
+## Reset networks show clustering for MNIST, Fashion MNIST and CIFAR-10
+
+Let's start by training 3 Reset(8) networks, each on a classic computer vision datasets: MNIST, Fashion MNIST and CIFAR-10. In each case, the networks reached standard performance levels on the test sets, but more interestingly, the following figure shows the model's grid after 20 epochs of training.
+
+![topography_across_domains](https://user-images.githubusercontent.com/13241166/145676025-584145c8-2980-4944-a85f-14d6e4d6872f.png)
+
+The upper plots present the class preference of each unit on the 32x32 grid of the trained model, whereas the lower plots quantify the amount of clustering on each map, at each point during training. 
+
+A unit's preference is given by the highest d-prime, over each target class, of the unit's responses to this target class against all other classes. Clustering is defined as the average size, over all target classes, of the connected components present on the map for this class. More details can be found in the [paper](https://www.biorxiv.org/content/10.1101/2021.11.19.469308v3).
+
+There is clustering for each of the three domains considered, with some variations across domains -for instance CIFAR-10 produces more clustering, while Fashion MNIST produces fewer category selective units.
+
+Clustering also happens quite quickly: it is largely in place after the first training epoch.
+
 ## Why are Reset networks relevant to cortical topography?
 
-Cortical topography in the strict sense is the notion that "nearby neurons in the cortex have receptive fields at nearby locations in the world" [1]. When understood as applying also to local fields or voxels as well as to neurons, this is a widespread phenomenon in brain imaging, observed throughout the visual cortex as well as in some associative areas. 
+Cortical topography in the strict sense is the notion that "nearby neurons in the cortex have receptive fields at nearby locations in the world" [1]. However the term has come to take a wider meaning: it is often understood as applying also to local fields or voxels as well as to neurons, and to refer to any kind of selectivity, not just spatial selectivity. In this wider sense, topography is a widespread phenomenon in brain imaging, it is observed throughout the visual cortex as well as in some associative areas. 
 
 ### Topography for numbers in parietal cortex [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1-iUCNMw8Ry-y4PF0xu_jGFpx0ghjTp4i?usp=sharing)
 
