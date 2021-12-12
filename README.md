@@ -79,15 +79,6 @@ Such regularization effects from autoencoding have been reported before for stan
 ### Topography
 Reset networks constitute a novel mechanism for topography to emerge in deep learning. We have established that the networks self-organize for MNIST, Fashion MNIST and CIFAR. We then presented firm evidence that they could reproduce topographic organization in parietal cortex for realistic number codes, and in ventral Occipitotemporal cortex for the so-called "categorical areas". A related point is that Reset networks provide a way to implement a cortical gradient, the mapping between foveal/peripheral input and lateral/medial in visual cortex, which is not easily captured within the standard "one-CNN-fits-all" approach.
 
-### VOTC topography and the Visual Word Form Area
-
-A closely related topic is that of the so-called Visual Word Form Area --which, with the benefit of insight and despite its discoverers' best intent upon naming it, is neither visual (congenital blind subjects have it too), word-level specific (it is also active for individual letters), nor probably a single area (it appears to be organized in patches). But names have great inertia, and this one does convey well the idea of a very narrow cortical region selective for stimuli related to words, as opposed to e.g. objects or number symbols. While some efforts have gone into modeling the VWFA [5], currently no model can account for its specific place within the topography of vOTC. The following network, designed with [Florence Bouhali](https://scholar.google.fr/citations?user=0J6-PIsAAAAJ&hl=en) (UCSF), describes what a Reset network of the VWFA could look like.
-
-<img src="https://user-images.githubusercontent.com/13241166/141679793-4c477a7f-3f69-498c-b634-4ba9d9be1ab1.png" width="500" height="700" />
-
-First, this Reset network would have 2 intermediate grids, P and A, standing for the posterior and anterior axis in vOTC. This is not an innovation, but now Reset networks allow for something interesting to happen. In addition to the posterior-to-anterior gradient, we can capture a lateral-to-medial gradient by ensuring that networks in the P grid see different parts of the input depending on where they are: left-located (lateral) networks on the P grid would receive input from the center of the image, whereas right-located (medial) networks would receive input from the periphery. In other words, we build into the model a lateral-to-medial gradient in vOTC by exploiting its well-documented correspondence with center/periphery processing [6]. We insist that such a relation cannot easily be built into a CNN, because of location invariance.
-
-
 ### Adding networks when necessary: the width and depth of Reset networks
 Reset networks align well with a view of neural development in which, rather than or in addition to recycling extant neural material, neural resources can also be recruited in the system if needed. Learning a new task could thus require only to widen the system by adding a network at the current level, with different networks possibly trained on different tasks. If expertise from previously learned tasks is required, the system can be made deeper by reshaping network outputs at the current level and creating a new level.
 
@@ -110,5 +101,3 @@ hallmarks of the primate inferior temporal cortex face processing network. 2020 
 [4] Le L, Patterson A, White M. Supervised autoencoders: Improving generalization performance with unsupervised regularizers. In [Advances in Neural Information Processing Systems. 2018. 107–117](https://proceedings.neurips.cc/paper/2018/file/2a38a4a9316c49e5a833517c45d31070-Paper.pdf).
 
 [5] Hannagan T, Agrawal A., Cohen L, Dehaene S. Emergence of a compositional neural code for written words: Recycling of a convolutional neural network for reading. Proceedings of the National Academy of Sciences Nov 2021, 118 (46) e2104779118; [doi: 10.1073/pnas.2104779118](https://www.pnas.org/content/118/46/e2104779118)
-
-[6] Op de Beeck HP, Pillet I, Ritchie JB. Factors Determining Where Category-Selective Areas Emerge in Visual Cortex. Trends Cogn Sci. 2019 Sep;23(9):784-797.[doi: 10.1016/j.tics.2019.06.006.](https://pubmed.ncbi.nlm.nih.gov/31327671/)
