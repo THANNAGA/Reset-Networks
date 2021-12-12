@@ -1,5 +1,5 @@
 # Reset Networks : rethinking the link between CNNs and the visual cortex
-Hannagan T. Reset Networks: Emergent Topography in Networks of Convolutional Neural Networks. [bioRxiv 2021.11.19.469308](https://www.biorxiv.org/content/10.1101/2021.11.19.469308v3)
+Hannagan T. Reset Networks: Emergent Topography by Composition of Convolutional Neural Networks. [bioRxiv 2021.11.19.469308](https://www.biorxiv.org/content/10.1101/2021.11.19.469308v3)
 
 ## TL-DR
 If you stack CNN classifiers on top of one another, they will self-organize topographically.
@@ -95,7 +95,7 @@ Reset networks align well with a view of neural development in which, rather tha
 Reset networks show that topography can emerge in deep CNN classifiers, when composed with one another. In this view, the topographic cortex should not be modeled as a single classifier, however deep and richly organized, but as a sequence of levels of neural network classifiers. This rests on the idea that the cortex has the ability to compose networks with one another if need be, and predicts that the outputs, or the late computational stages, of cortical classifiers are either spatially organized, or somehow reshaped spatially during the course of composition.
 
 ## Citation
-Hannagan T. Reset Networks: Emergent Topography in Networks of Convolutional Neural Networks. [bioRxiv 2021.11.19.469308](https://www.biorxiv.org/content/10.1101/2021.11.19.469308v3)
+Hannagan T. Reset Networks: Emergent Topography by Composition of Convolutional Neural Networks. [bioRxiv 2021.11.19.469308](https://www.biorxiv.org/content/10.1101/2021.11.19.469308v3)
 
 
 ## References
@@ -112,6 +112,3 @@ hallmarks of the primate inferior temporal cortex face processing network. 2020 
 [5] Hannagan T, Agrawal A., Cohen L, Dehaene S. Emergence of a compositional neural code for written words: Recycling of a convolutional neural network for reading. Proceedings of the National Academy of Sciences Nov 2021, 118 (46) e2104779118; [doi: 10.1073/pnas.2104779118](https://www.pnas.org/content/118/46/e2104779118)
 
 [6] Op de Beeck HP, Pillet I, Ritchie JB. Factors Determining Where Category-Selective Areas Emerge in Visual Cortex. Trends Cogn Sci. 2019 Sep;23(9):784-797.[doi: 10.1016/j.tics.2019.06.006.](https://pubmed.ncbi.nlm.nih.gov/31327671/)
-
-
-
