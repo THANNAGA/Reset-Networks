@@ -29,9 +29,13 @@ The upper plots present converged preference maps -the class preference of each 
 
 A unit's preference is given by the highest d-prime, over each target class, of the unit's responses to this target class against all other classes. If this maximum d-prime is below an arbitrary threshold, here set to 2, the unit is said to have no preference (white units on the preference map). Clustering is then defined as the average size, over all target classes, of the connected components present on the map for this class. More details can be found in the [paper](https://www.biorxiv.org/content/10.1101/2021.11.19.469308v3).
 
-There is clustering for each of the three domains considered, with some variations across domains -for instance CIFAR-10 produces more clustering, while Fashion MNIST produces fewer category selective units.
+There is clustering for each of the three domains considered, with some variations across domains -for instance CIFAR-10 produces more clustering, while Fashion MNIST produces fewer category selective units. Clustering also happens quite quickly: it is largely in place after the first training epoch.
 
-Clustering also happens quite quickly: it is largely in place after the first training epoch.
+One might be forgiven to think that clustering arises out of the concatenation of reshaped outputs. In order to disentangle the effects of reshaping from those of concatenating outputs, we consider clustering in the family of Reset(n) networks for n = 1, 2, 4 and 8. We emphasize that although n varies, the size of the grid remains fixed at 32x32. For more readabilty, the curves shown below are obtained by subtracting the clustering for shuffled maps to that of normal maps.
+
+![topography_across_domains_and_sizes](https://user-images.githubusercontent.com/13241166/146064814-79cc1353-8d3b-4e8a-a625-8e2b96611bca.png)
+
+It can be seen that clustering is always non-zero for all n, though there is a clear tendency of clustering to increase with n.
 
 ## Why are Reset networks relevant to cortical topography?
 
