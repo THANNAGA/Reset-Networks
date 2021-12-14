@@ -33,7 +33,7 @@ There is clustering for each of the three domains considered, with some variatio
 
 One might be forgiven to think that clustering arises out of the concatenation of reshaped outputs. In order to disentangle the effects of reshaping from those of concatenating outputs, we consider clustering in the family of Reset(n) networks for n = 1, 2, 4 and 8. We emphasize that although n varies, the size of the grid remains fixed at 32x32. For more readabilty, the curves shown below are obtained by subtracting the clustering for shuffled maps to that of normal maps.
 
-![topography_across_domains_and_sizes](https://user-images.githubusercontent.com/13241166/146064814-79cc1353-8d3b-4e8a-a625-8e2b96611bca.png)
+![topography_across_domains_and_sizes](https://user-images.githubusercontent.com/13241166/146066331-cf513231-7db9-41bf-a8b1-1627288aa72a.png)
 
 It can be seen that clustering is always non-zero for all n, though there is a clear tendency of clustering to increase with n.
 
