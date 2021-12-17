@@ -35,7 +35,7 @@ One might be forgiven to think that clustering arises out of the concatenation o
 
 ![topography_across_domains_and_sizes](https://user-images.githubusercontent.com/13241166/146066331-cf513231-7db9-41bf-a8b1-1627288aa72a.png)
 
-It can be seen that clustering is always non-zero for all n, though there is a clear tendency of clustering to increase with n.
+It can be seen that clustering is always non-zero for all n, though there is a clear tendency of clustering to increase with n. Though a significant component of clustering comes from concatenating the outputs of several networks, it is not a necessary condition: the Reset(1) curve shows that two CNN classifiers on top of one another already will produce clustering.
 
 ## Why are Reset networks relevant to cortical topography?
 
