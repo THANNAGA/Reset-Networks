@@ -100,6 +100,9 @@ Reset networks show that topography can emerge in deep CNN classifiers, when com
 ## Citation
 Hannagan T. Reset Networks: Emergent Topography by Composition of Convolutional Neural Networks. [bioRxiv 2021.11.19.469308](https://www.biorxiv.org/content/10.1101/2021.11.19.469308v3)
 
+## Note
+Due to GitHub's limitations on upload size, I could not include pretrained Reset(8) networks in this repository.
+On the other hand, there are folders for each of the tasks considered -MNIST, Fashion MNIST, Cifar-10, Cifar-100 and number codes- where one can find the notebooks used for training and analysis. The python code in these notebooks is not always optimized or clean, and there are some differences in the topography and clustering indices used in the anaylsis.
 
 ## References
 [1] Grill-Spector K, Weiner KS. (2014) The functional architecture of the ventral temporal cortex and its role in categorization. Nat. Rev. Neurosci. 15, 536–548.[https://doi.org/10.1038/nrn3747](https://www.nature.com/articles/nrn3747.pdf?origin=ppub)
