@@ -39,7 +39,7 @@ It can be seen that clustering is always non-zero for all n, and that there is a
 
 ## Reset networks and categorical areas in ventral occipitotemporal cortex
 
-In ventral occipitotemporal cortex, more than two decades of studies have established the presence of areas selective for various widespread visual categories, in particular faces, bodies, tools, houses, and words. While there is no shortage of computational models able to reproduce many caracteristics of the visual system, including some of vOTC, only one [3] achieves both topography and scale at the same time - with topography being problematic as it requires two different notions of space to coexist. By contrast, the way Reset networks achieve topography at scale is conceptually straightforward. 
+In ventral occipitotemporal cortex, more than two decades of studies have established the presence of areas selective for various widespread visual categories, in particular faces, bodies, tools, houses, and words [1]. While there is no shortage of computational models able to reproduce many caracteristics of the visual system, including some of the so-called Visual Word Form Area in vOTC [2], as of 2021 only one model [3] achieves both topography and scale at the same time - with topography being problematic as it requires two different notions of space to coexist. By contrast, the way Reset networks achieve topography at scale is conceptually straightforward. 
 I thank ![Hyodong Lee](https://scholar.google.com/citations?user=1QvDhAQAAAAJ&hl=en), who would likely disagree with my assessment of the problem, for email exchanges on her innovative work on Topographic Deep Artificial Neural Networks. 
 
 ![topography_CIFAR100_across_sizes](https://user-images.githubusercontent.com/13241166/146969318-9564c726-d12a-483f-a166-db5bee3da980.png)
@@ -52,12 +52,13 @@ Pretrained Reset networks are available in the folder ![Topography for cifar](ht
 
 ## Reset networks and topography for numbers in parietal cortex
 
-So far we have been dealing with clustering, which, though related a notion, is not exactly the same as topography. 
-Cortical topography in the strict sense is the notion that "nearby neurons in the cortex have receptive fields at nearby locations in the world" [1]. However the term has come to take a wider meaning: it is often understood as applying also to local fields or voxels as well as to neurons, and to refer to any kind of selectivity, not just location selectivity. In this wider sense, topography is a widespread phenomenon in brain imaging, observed throughout the visual cortex as well as in some associative areas. 
+So far we have been dealing with clustering, which, though related a notion, is weaker than topography: one can have clustering without topography, but topographic organization necessarily implies clustering. 
+
+Cortical topography in the strict sense is the notion that "nearby neurons in the cortex have receptive fields at nearby locations in the world" [4]. However the term has come to take a wider meaning: it is often understood as applying also to local fields or voxels as well as to neurons, and to refer to any kind of selectivity, not just location selectivity. In this wider sense, topography is a widespread phenomenon in brain imaging, observed throughout the visual cortex as well as in some associative areas. 
 
 In parietal cortex, voxels selective for similar numbers are more likely to be contiguous: this number topography is not yet well understood. Of course, we have just seen that Reset networks will self-organize when trained to classify hand-written digits, so one might argue that this is a good start for an explanation. However, classifying MNIST is not entirely satisfying from a neuroscientific point of view: it is very likely that kids map written digits not onto one-hot labels, but onto pre-existing (possibly innate!) number representations that have a rather special format. 
 
-The nature of these codes has been thoroughly studied in [2]: a lot of phenomena could be explained if number codes were sparsely distributed vectors, with exponentially more overlap between successive number codes as numbers increase. Therefore, it would be more convincing if Reset networks could reproduce number topography by mapping digit images onto these realistic number codes (and even more so if the task was to map visual scenes with n objects to the number code for n, but that's yet another project).
+The nature of these codes has been thoroughly studied in [5]: a lot of phenomena could be explained if number codes were sparsely distributed vectors, with exponentially more overlap between successive number codes as numbers increase. Therefore, it would be more convincing if Reset networks could reproduce number topography by mapping digit images onto these realistic number codes (and even more so if the task was to map visual scenes with n objects to the number code for n, but that's yet another project).
 
 As the figure below shows, a sequence of Reset(1), (2), (4) and (8) networks -all with the same grid size of 32x32 units- can be trained to map images of digits onto number codes, and succeeds in reproducing topographic organization. We emphasize that we would expect the same topography to emerge for classification of dots, or any kind of stimuli with countable objects.
 
@@ -85,7 +86,7 @@ In the course of our investigations, we observed that Reset networks that were b
 
 ![auto_encoding_regularization](https://user-images.githubusercontent.com/13241166/143776940-28693edd-ef46-42a7-9ccc-59727559592b.png)
 
-Such regularization effects from autoencoding have been reported before for standard classifiers [4]. The novelty in Reset networks is that input reconstruction must be accomplished using the information from the whole grid: this suggests that in visual cortex, some feedback connections between distal cortical areas actually function as regularizers of cortical spaces.
+Such regularization effects from autoencoding have been reported before for standard classifiers [6]. The novelty in Reset networks is that input reconstruction must be accomplished using the information from the whole grid: this suggests that in visual cortex, some feedback connections between distal cortical areas actually function as regularizers of cortical spaces.
 
 ### Topography
 Reset networks constitute a novel mechanism for topography to emerge in deep learning. We have established that the networks self-organize for MNIST, Fashion MNIST and CIFAR. We then presented firm evidence that they could reproduce topographic organization in parietal cortex for realistic number codes, and in ventral Occipitotemporal cortex for the so-called "categorical areas". A related point is that Reset networks provide a way to implement a cortical gradient, the mapping between foveal/peripheral input and lateral/medial in visual cortex, which is not easily captured within the standard "one-CNN-fits-all" approach.
@@ -101,14 +102,18 @@ Hannagan T. Reset Networks: Emergent Topography by Composition of Convolutional 
 
 
 ## References
-[1] Patel GH, Kaplan DM, Snyder LH. Topographic organization in the brain: searching for general principles. Trends Cogn Sci. 2014;18(7):351-363. [doi:10.1016/j.tics.2014.03.008](https://pubmed.ncbi.nlm.nih.gov/24862252/)
+[1] Grill-Spector K, Weiner KS. (2014) The functional architecture of the ventral temporal cortex and its role in categorization. Nat. Rev. Neurosci. 15, 536–548.[https://doi.org/10.1038/nrn3747](https://www.nature.com/articles/nrn3747.pdf?origin=ppub)
 
-[2] Hannagan T, Nieder A, Viswanathan P, Dehaene S. A random-matrix theory of the number sense. Phil. Trans. R. Soc. B. 2018;373:20170253.
-[doi:10.1098/rstb.2017.0253](https://royalsocietypublishing.org/doi/10.1098/rstb.2017.0253)
+[2] Hannagan T, Agrawal A., Cohen L, Dehaene S. Emergence of a compositional neural code for written words: Recycling of a convolutional neural network for reading. Proceedings of the National Academy of Sciences Nov 2021, 118 (46) e2104779118; [doi: 10.1073/pnas.2104779118](https://www.pnas.org/content/118/46/e2104779118)
 
 [3] Lee H, Margalit E, Jozwik KM, Cohen MA, Kanwisher N, Yamins DL, DiCarlo JJ. Topographic deep artificial neural networks reproduce the 
 hallmarks of the primate inferior temporal cortex face processing network. 2020 [bioRxiv](https://www.biorxiv.org/content/10.1101/2020.07.09.185116v1.full.pdf).
 
-[4] Le L, Patterson A, White M. Supervised autoencoders: Improving generalization performance with unsupervised regularizers. In [Advances in Neural Information Processing Systems. 2018. 107–117](https://proceedings.neurips.cc/paper/2018/file/2a38a4a9316c49e5a833517c45d31070-Paper.pdf).
+[4] Patel GH, Kaplan DM, Snyder LH. Topographic organization in the brain: searching for general principles. Trends Cogn Sci. 2014;18(7):351-363. [doi:10.1016/j.tics.2014.03.008](https://pubmed.ncbi.nlm.nih.gov/24862252/)
 
-[5] Hannagan T, Agrawal A., Cohen L, Dehaene S. Emergence of a compositional neural code for written words: Recycling of a convolutional neural network for reading. Proceedings of the National Academy of Sciences Nov 2021, 118 (46) e2104779118; [doi: 10.1073/pnas.2104779118](https://www.pnas.org/content/118/46/e2104779118)
+[5] Hannagan T, Nieder A, Viswanathan P, Dehaene S. A random-matrix theory of the number sense. Phil. Trans. R. Soc. B. 2018;373:20170253.
+[doi:10.1098/rstb.2017.0253](https://royalsocietypublishing.org/doi/10.1098/rstb.2017.0253)
+
+[6] Le L, Patterson A, White M. Supervised autoencoders: Improving generalization performance with unsupervised regularizers. In [Advances in Neural Information Processing Systems. 2018. 107–117](https://proceedings.neurips.cc/paper/2018/file/2a38a4a9316c49e5a833517c45d31070-Paper.pdf).
+
+
