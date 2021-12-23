@@ -1,5 +1,5 @@
 # Reset Networks : rethinking the link between CNNs and the visual cortex
-Hannagan T. Reset Networks: Emergent Topography by Composition of Convolutional Neural Networks. [bioRxiv 2021.11.19.469308](https://www.biorxiv.org/content/10.1101/2021.11.19.469308v3)
+Hannagan T. (2021) Reset Networks: Emergent Topography by Composition of Convolutional Neural Networks. [bioRxiv 2021.11.19.469308](https://www.biorxiv.org/content/10.1101/2021.11.19.469308v3)
 
 ## TL-DR
 If you stack CNN classifiers on top of one another, they will self-organize topographically.
@@ -98,7 +98,7 @@ Reset networks align well with a view of neural development in which, rather tha
 Reset networks show that topography can emerge in deep CNN classifiers, when composed with one another. In this view, the topographic cortex should not be modeled as a single classifier, however deep and richly organized, but as a sequence of levels of neural network classifiers. This rests on the idea that the cortex has the ability to compose networks with one another if need be, and predicts that the outputs, or the late computational stages, of cortical classifiers are either spatially organized, or somehow reshaped spatially during the course of composition.
 
 ## Citation
-Hannagan T. Reset Networks: Emergent Topography by Composition of Convolutional Neural Networks. [bioRxiv 2021.11.19.469308](https://www.biorxiv.org/content/10.1101/2021.11.19.469308v3)
+Hannagan T. (2021) Reset Networks: Emergent Topography by Composition of Convolutional Neural Networks. [bioRxiv 2021.11.19.469308](https://www.biorxiv.org/content/10.1101/2021.11.19.469308v3)
 
 ## Note
 Due to GitHub's limitations on upload size, I could not include pretrained Reset(8) networks in this repository.
