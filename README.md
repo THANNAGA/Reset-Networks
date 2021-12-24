@@ -17,7 +17,7 @@ Reset networks include in particular the following family of depth 2, where leve
 
 The master network forces the grid of subnetworks underneath to organize in order to solve the task, distributing work in a way that creates topography. Exactly how this happens is still not clear, but the results below provide a few hints.
 
-The notebooks hosted in this Github and on Google Colab demonstrate that Reset networks can perform classification at scale -which arguably is not so suprising- while also exhibiting emergent topographic organization. 
+The notebooks hosted in this Github demonstrate that Reset networks can perform classification at scale -which arguably is not so suprising- while also exhibiting emergent topographic organization. 
 
 ## Reset networks show clustering for MNIST, Fashion MNIST and CIFAR-10
 
