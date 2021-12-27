@@ -48,7 +48,7 @@ The figure above shows final preference maps of Reset(1), (2), (4) and (8) netwo
 
 Though many units show no special preference for these macro-categories, clustering is still obvious on the maps, as it is in the mean cluster sizes. There are a few points worth noting. First, by and large clustering tends to increase with the number of epochs and with the size of the Reset network. Second, subnetworks tend to specialize for some categories. This is particularly well exemplified in the case of Reset(2), where the upper-left remains insensitive, the lower right subnetwork has units specializing for all 3 categories, while the lower left and upper right ones specialize for people and objects, respectively.
 
-Pretrained Reset networks are available in the folder ![Topography for cifar](https://github.com/THANNAGA/Reset-Networks/tree/main/Topography%20for%20cifar), along with movies showing how topography evolves during training of these networks, for the 3 categories considered.
+Pretrained Reset networks are available in the folder ![Topography for cifar](https://github.com/THANNAGA/Reset-Networks/tree/main/Topography%20for%20cifar-100), along with movies showing how topography evolves during training of these networks, for the 3 categories considered.
 
 ## Reset networks and topography for numbers in parietal cortex
 
@@ -107,7 +107,7 @@ On the other hand, there are folders for each of the tasks considered -MNIST, Fa
 ## References
 [1] Grill-Spector K, Weiner KS. (2014) The functional architecture of the ventral temporal cortex and its role in categorization. Nat. Rev. Neurosci. 15, 536–548.[https://doi.org/10.1038/nrn3747](https://www.nature.com/articles/nrn3747.pdf?origin=ppub)
 
-[2] Hannagan T, Agrawal A., Cohen L, Dehaene S. Emergence of a compositional neural code for written words: Recycling of a convolutional neural network for reading. Proceedings of the National Academy of Sciences Nov 2021, 118 (46) e2104779118; [doi: 10.1073/pnas.2104779118](https://www.pnas.org/content/118/46/e2104779118)
+[2] Hannagan T, Agrawal A, Cohen L, Dehaene S. Emergence of a compositional neural code for written words: Recycling of a convolutional neural network for reading. Proceedings of the National Academy of Sciences Nov 2021, 118 (46) e2104779118; [doi: 10.1073/pnas.2104779118](https://www.pnas.org/content/118/46/e2104779118)
 
 [3] Lee H, Margalit E, Jozwik KM, Cohen MA, Kanwisher N, Yamins DL, DiCarlo JJ. Topographic deep artificial neural networks reproduce the 
 hallmarks of the primate inferior temporal cortex face processing network. 2020 [bioRxiv](https://www.biorxiv.org/content/10.1101/2020.07.09.185116v1.full.pdf).
