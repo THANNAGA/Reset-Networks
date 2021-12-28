@@ -52,7 +52,7 @@ Pretrained Reset networks are available in the folder ![Topography for cifar](ht
 
 ## Reset networks and topography for numbers in parietal cortex
 
-So far we have been dealing with clustering, which, though related a notion, is weaker than topography: one can have clustering without topography, but topographic organization necessarily implies clustering. 
+So far I have been dealing with clustering, which, though related a notion, is weaker than topography.
 
 Cortical topography in the strict sense is the notion that "nearby neurons in the cortex have receptive fields at nearby locations in the world" [4]. However the term has come to take a wider meaning: it is often understood as applying also to local fields or voxels as well as to neurons, and to refer to any kind of selectivity, not just location selectivity. In this wider sense, topography is a widespread phenomenon in brain imaging, observed throughout the visual cortex as well as in some associative areas. 
 
