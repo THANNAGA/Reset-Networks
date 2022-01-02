@@ -21,7 +21,7 @@ The notebooks hosted in this Github demonstrate that Reset networks can perform 
 
 ## Reset networks show clustering for MNIST, Fashion MNIST and CIFAR-10
 
-Let's start by training 3 Reset(8) networks, each on a classic computer vision datasets: MNIST, Fashion MNIST and CIFAR-10. In all cases, the networks reached standard performance levels on the test sets, but more interestingly, the following figure shows the models' grids after 20 epochs of training.
+Let's start by training 3 Reset(8) networks, each on a classic computer vision dataset: MNIST, Fashion MNIST and CIFAR-10. In all cases, the networks reached standard performance levels on the test sets, but more interestingly, the following figure shows the models' grids after 20 epochs of training.
 
 ![topography_across_domains](https://user-images.githubusercontent.com/13241166/146968368-446aa746-6a98-4e85-ad08-ddc2b37cc11f.png)
 
